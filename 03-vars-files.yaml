@@ -1,0 +1,8 @@
+- name: print variables
+  hosts: localhost
+  vars: 
+  - vars.yaml
+  tasks:
+  - name: print actual info
+    ansible.builtin.debug:
+      msg: "{{name}} having  {{proffession}} as a proffession with {{intrests}} as an intrest"
