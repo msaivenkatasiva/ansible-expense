@@ -1,5 +1,5 @@
 - name: print variables
-  host: localhost
+  hosts: localhost
   vars: 
     name: M_S_V_SIVA
     proffession: debugging
