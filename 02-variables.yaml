@@ -10,7 +10,7 @@
       name: siva_m_s_v
       proffession: exploring
       intrests: hunting
-    ansible.builtin.debugging:
+    ansible.builtin.debug:
       msg: "{{name}} having  {{proffession}} as a proffession with {{intrests}} as an intrest"
 
   - name: print actual info
