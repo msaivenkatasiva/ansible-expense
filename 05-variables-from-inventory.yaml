@@ -1,0 +1,8 @@
+- name: printing information
+  hosts: localhost
+  tasks:
+  - name: print vars from inventory
+    vars:
+      intrests: devops
+    ansible.builtin.debug:
+      msg: "{{name}} having  {{proffession}} as a proffession with {{intrests}} as an intrest"
