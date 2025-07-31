@@ -1,15 +1,15 @@
 - name: conditions
-  hosts: localhost
+  hosts: node
   become: yes
   tasks:
   - name: check user exist or not
-    ansbile.builtin.command: id user
+    ansbile.builtin.command: id expense
     register: USER
     ignore_errors: true
 
   - name: print user information
     ansible.builtin.debug:
-    msg: "User info: {{USER}}"
+      msg: "User info: {{USER}}"
 
   - name: create user
     ansible.builtin.command: useradd expense
@@ -17,4 +17,4 @@
 
   - name: say hello
     ansible.builtin.debug:
-    msg: "welcome to devopswithmsvs"
+      msg: "welcome to devopswithmsvs"
