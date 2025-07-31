@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: check user exist or not
-    ansbile.builtin.command: id expense
+    ansibile.builtin.command: id expense
     register: USER
     ignore_errors: true
 
@@ -13,7 +13,7 @@
 
   - name: create user
     ansible.builtin.command: useradd expense
-    when: USER.RC != 0 #CONDITION
+    when: user.RC != 0 #CONDITION
 
   - name: say hello
     ansible.builtin.debug:
