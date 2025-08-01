@@ -5,3 +5,11 @@
     ansible.builtin.debug:
       msg: "welcome to {{institute | default('devopswithmsvs') }}"
 
+- name: uppercase
+  hosts: localhost
+  vars:
+    note: devopswithmsvs
+  tasks:
+  - name: convert to uppercase
+    ansible.builtin.debug:
+      msg: "welcome to {{note | upper}}"
