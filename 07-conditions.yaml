@@ -13,7 +13,7 @@
   - name: number is equal to 10
     ansible.builtin.debug:
       msg: "given number {{number}} is equal to 10"
-    when: number | int = 10
+    when: number | int == 10
 
   - name: number is greater than 10
     ansible.builtin.debug:
