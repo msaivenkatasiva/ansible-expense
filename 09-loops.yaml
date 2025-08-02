@@ -1,10 +1,10 @@
 - name: demo on loops
   hosts: localhost
   tasks:
-  - name: say hello
+  - name: print names
     ansible.builtin.debug:
       msg: "say hello to {{item}}"
-    loops:
+    loop:
     - ansible
     - devops
     - devsecops
@@ -15,8 +15,8 @@
   tasks:
   - name: install packages
     ansible.builtin.dnf:
-    - name: 
-      state:
+    - name: {{item.name}}
+      state: {{item.state}}
     loop:
     - { name: 'nginx', state: 'present'}
     - { name: 'mysql', state: 'present'}
