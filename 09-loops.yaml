@@ -15,7 +15,7 @@
   tasks:
   - name: install packages
     ansible.builtin.dnf:
-    - name: "{{ item.name }}"
+      name: "{{ item.name }}"
       state: "{{ item.state }}"
     loop:
     - { name: 'nginx', state: 'present'}
