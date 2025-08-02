@@ -1,0 +1,23 @@
+- name: demo on loops
+  hosts: localhost
+  tasks:
+  - name: say hello
+    ansible.builtin.debug:
+      msg: "say hello to {{item}}"
+    loops:
+    - ansible
+    - devops
+    - devsecops
+
+- name: install given packages
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: install packages
+    ansible.builtin.dnf:
+    - name: 
+      state:
+    loop:
+    - { name: 'nginx', state: 'present'}
+    - { name: 'mysql', state: 'present'}
+    - { name: 'postfix', state: 'present'}
